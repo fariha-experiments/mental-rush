@@ -1,0 +1,16 @@
+{
+  "name": "mental-rush",
+  "version": "1.0.0",
+  "description": "It's a focus muscle building exercise/game that forces you to stay  present and focus. \r Helps build longer periods of attention span and FORCES you to shut off your overthinking/inner voice.",
+  "main": "index.js",
+"scripts": {
+    "build-css": "npx @tailwindcss/cli -i ./src/style.css -o ./public/style/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}
