@@ -85,7 +85,7 @@ if (isChrome) {
 // voiceSelect.addEventListener('change', e => speak());
 
 function startCounter(e) {
-    let speeds = { 1: 500, 2: 1000, 3: 1200, 4: 1500 };
+    let speeds = { 1: 500, 2: 1000, 3: 1200, 4: 1500};
     const speedSelect = document.querySelector('input[name="speed"]:checked').value;
 
 
@@ -99,13 +99,15 @@ function startCounter(e) {
 
     }
 
-    //     console.log("delay2",delay);
+  
 
     // check if an interval has already been set up
     if (!intervalId) {
         intervalId = setInterval(flashText, textRate);
     }
 }
+
+
 
 function flashText() {
     const maxRangeValue = document.getElementById("maxInterval").value;
@@ -134,6 +136,44 @@ function flashText() {
     // console.log(display);
 
     /*oElem.className = oElem.className === "go" ? "stop" : "go";*/
+}
+
+//function to decide the flow based on what the user selects in display level 3
+function getLevel3Option(selectedOption){
+var selectedDropdownOption = (selectedOption ==="physical")? "physical" : "mental";
+populateDropdown(selectedDropdownOption);
+}
+
+//populate level 4 dropdown list based on user choice 
+function populateDropdown(option){
+const activities = {
+  mental: [
+    "snap",
+    "clap",
+    "blink",
+    "left two",
+    "right two",
+    "left thumsup",
+    "right thumbsup",
+    "both thumsup"
+  ],
+  physical: [
+    "Single leg hop",
+    "double leg hop",
+    "front hop",
+    "left hop",
+    "right hop",
+    "back hop",
+    "turn around clockwise hop",
+    "turn around anti-clockwise hop",
+    "squat",
+    "left lunge",
+    "right lunge"
+  ]
+};
+
+console.log("dd option",option);
+
 }
 
 
