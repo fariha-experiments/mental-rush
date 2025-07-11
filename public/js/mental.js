@@ -10,6 +10,7 @@ const synth = window.speechSynthesis;
 const textForm = document.querySelector('form');
 // const maxRangeValue = document.getElementById("maxInterval").value;
 const maindisplayText = document.getElementById("display");
+// const dropDownValue = document.querySelector(".level-3 > button").value;
 
 
 
@@ -20,6 +21,7 @@ const maindisplayText = document.getElementById("display");
 // const pitch = document.querySelector('#pitch');
 // const pitchValue = document.querySelector('#pitch-value');
 // const body = document.querySelector('body');
+// document.getElementByClassName(".level3-btn-group").addEventListener("click",setLevel3Option);
 
 //Browser identifier
 // Firefox 1.0+
@@ -139,7 +141,9 @@ function flashText() {
 }
 
 //function to decide the flow based on what the user selects in display level 3
-function getLevel3Option(selectedOption){
+function setLevel3Option(e){
+    let selectedOption = e.target.value;
+// console.log("dropDownValue",selectedOption);
 var selectedDropdownOption = (selectedOption ==="physical")? "physical" : "mental";
 populateDropdown(selectedDropdownOption);
 }
@@ -231,3 +235,4 @@ function stopTextColor() {
 
 document.getElementById("set").addEventListener("click", startCounter);
 document.getElementById("stop").addEventListener("click", stopTextColor);
+document.querySelector(".level3-btn-group").addEventListener("click",setLevel3Option);

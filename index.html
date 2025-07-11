@@ -1,98 +1,100 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>mental-rush</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    -->
-    <!-- np -->
-    <link rel="stylesheet" href="./public/style/style.css" />
-</head>
-
-<body>
-    <div id="my_box " class="flex flex-col items-center justify-center gap-3">
-        <label for="maxInterval">Enter the max interval:</label>
-        <input type="text" id="maxInterval" class="border-1 border-solid" name="maxInterval" />
-
-        <form>
-            <legend>choose your speed preferance</legend>
-            <div class="flex flex-row justify-center">
-                <input type="radio" id="option1" value="1" name="speed" />
-                <label for="option1">1</label>
-                <input type="radio" id="option2" value="2" name="speed" />
-                <label for="option2">2</label>
-                <input type="radio" id="option3" value="3" name="speed" />
-                <label for="option3">3</label>
-                <input type="radio" id="option4" value="4" name="speed" />
-                <label for="option4">4</label>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>mental-rush</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    -->
+        <!-- np -->
+        <link rel="stylesheet" href="./public/style/style.css">
+    </head>
+    <body>
+        <div id="my_box " class="flex flex-col items-center justify-center gap-3">
+            <label for="maxInterval">Enter the max interval:</label>
+            <input
+                type="text"
+                id="maxInterval"
+                class="border-1 border-solid"
+                name="maxInterval"
+            >
+            <form>
+                <legend>choose your speed preferance</legend>
+                <div class="flex flex-row justify-center">
+                    <input
+                        type="radio"
+                        id="option1"
+                        value="1"
+                        name="speed"
+                    >
+                    <label for="option1">1</label>
+                    <input
+                        type="radio"
+                        id="option2"
+                        value="2"
+                        name="speed"
+                    >
+                    <label for="option2">2</label>
+                    <input
+                        type="radio"
+                        id="option3"
+                        value="3"
+                        name="speed"
+                    >
+                    <label for="option3">3</label>
+                    <input
+                        type="radio"
+                        id="option4"
+                        value="4"
+                        name="speed"
+                    >
+                    <label for="option4">4</label>
+                </div>
+            </form>
+            <div class="level-3  flex flex-col justify-center">
+                <h3 class="font-sans">Do you want to improve your focus through physical release of energy or a quick mental workout?</h3>
+                <div class="level3-btn-group inline-flex flex-row justify-center">
+                  <button value="mental" class=" mental bg-white text-indigo-600 hover:bg-indigo-600 hover:text-white gap-3 px-3">
+                    mental</button>
+                  <button type="button" value="physical" class="bg-blue rounded-l text-white-600 hover:bg-indigo-600 hover:text-white">
+                    physical
+                  </button>
+                
+                </div>
+                </div>
+                <div class="level-4"></div>
+                <div class="btn-grp flex flex-row">
+                    <button type="button" id="set" class="">
+                        <div class="relative inline-flex items-center justify-center gap-4 group">
+                            <div class="absolute inset-0 duration-1000 opacity-60 transitiona-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+                            <a
+                                role="button"
+                                class="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+                                title="payment"
+                                href="#"
+                            >Aru you ready?
+                                <svg
+                                    aria-hidden="true"
+                                    viewBox="0 0 10 10"
+                                    height="10"
+                                    width="10"
+                                    fill="none"
+                                    class="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
+                                >
+                                    <path d="M0 5h7" class="transition opacity-0 group-hover:opacity-100"></path>
+                                    <path d="M1 1l4 4-4 4" class="transition group-hover:translate-x-[3px]"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </button>
+                    <button id="stop">Stop</button>
+                </div>
+                <h3 id="display" class="text-3xl font-bold underline font-lato-bold">
+                    Hello Sunshine!
+                </h3>
+                <h3 id="display2"></h3>
             </div>
-        </form>
-
-         <div class="level-3  flex flex-col justify-center">
-            <h3 class="font-sans">Do you want to improve your focus through physical release of energy or a quick mental workout?</h3>
-          <div class="inline-flex flex-row justify-center">
-            <button class="bg-white text-indigo-600 hover:bg-indigo-600 hover:text-white" >
- 
-  mental
-<button type="button" class="bg-blue text-white-600 hover:bg-indigo-600 hover:text-white">
-  
-physical
-</button>
-            <button></button>
-          </div>
-        
-        
-        </div>
-
-        <div class="level-4">
-
-        </div>
-
-        <div class="btn-grp flex flex-row">
-            <button type="button" id="set" class="">
-          <div class="relative inline-flex items-center justify-center gap-4 group">
-            <div
-              class="absolute inset-0 duration-1000 opacity-60 transitiona-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
-            <a
-              role="button"
-              class="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
-              title="payment"
-              href="#"
-              >Aru you ready?<svg
-                aria-hidden="true"
-                viewBox="0 0 10 10"
-                height="10"
-                width="10"
-                fill="none"
-                class="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
-              >
-                <path
-                  d="M0 5h7"
-                  class="transition opacity-0 group-hover:opacity-100"
-                ></path>
-                <path
-                  d="M1 1l4 4-4 4"
-                  class="transition group-hover:translate-x-[3px]"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </button>
-
-            <button id="stop">Stop</button>
-        </div>
-
-        <h3 id="display" class="text-3xl font-bold underline font-lato-bold">
-            Hello Sunshine!
-        </h3>
-        <h3 id="display2"></h3>
-    </div>
-
-    <script src="./public/js/mental.js"></script>
-</body>
-
-</html>
+            <script src="./public/js/mental.js"></script>
+        </body>
+    </html>
